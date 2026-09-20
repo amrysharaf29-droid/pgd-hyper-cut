@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PGD HYPER CUT | Admin</title>
+
+    <link rel="stylesheet" href="admin.css">
+</head>
+
+<body>
+
+    <!-- LOGIN -->
+
+    <div class="login-box" id="loginBox">
+
+        <h1>PGD HYPER CUT</h1>
+
+        <p>ADMIN LOGIN</p>
+
+        <input
+            type="email"
+            id="adminEmail"
+            placeholder="Admin Email"
+        >
+
+        <input
+            type="password"
+            id="adminPassword"
+            placeholder="Password"
+        >
+
+        <button onclick="adminLogin()">
+            LOGIN
+        </button>
+
+        <div id="loginError"></div>
+
+    </div>
+
+
+    <!-- ADMIN PANEL -->
+
+    <div class="admin-container" id="adminPanel">
+
+        <h1>PGD HYPER CUT</h1>
+
+        <p>ADMIN PANEL</p>
+        <button class="logout-button" onclick="adminLogout()">
+    LOGOUT
+</button>
+
+        <div id="bookings">
+            Loading bookings...
+        </div>
+
+    </div>
+
+
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+
+    <script src="admin.js"></script>
+
+</body>
+
+</html>

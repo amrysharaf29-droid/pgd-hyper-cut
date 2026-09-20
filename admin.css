@@ -1,0 +1,208 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #080808;
+    color: white;
+    min-height: 100vh;
+}
+
+
+/* LOGIN */
+
+.login-box {
+    width: 90%;
+    max-width: 420px;
+    margin: 120px auto;
+    padding: 40px 30px;
+    background: #151515;
+    border: 1px solid #292929;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.login-box h1 {
+    color: #f5b400;
+    font-size: 30px;
+}
+
+.login-box p {
+    color: #999;
+    margin: 10px 0 30px;
+    letter-spacing: 3px;
+}
+
+.login-box input {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 15px;
+    border: 1px solid #333;
+    border-radius: 10px;
+    background: #0d0d0d;
+    color: white;
+    font-size: 15px;
+    outline: none;
+}
+
+.login-box input:focus {
+    border-color: #f5b400;
+}
+
+.login-box button {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    background: #f5b400;
+    color: #000;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.login-box button:hover {
+    opacity: 0.85;
+}
+
+#loginError {
+    margin-top: 15px;
+    color: #ff5555;
+}
+
+
+/* ADMIN PANEL */
+
+.admin-container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 50px auto;
+}
+
+.admin-container h1 {
+    color: #f5b400;
+    font-size: 32px;
+}
+
+.admin-container > p {
+    color: #999;
+    margin-top: 8px;
+    margin-bottom: 35px;
+    letter-spacing: 2px;
+}
+
+#bookings {
+    display: grid;
+    gap: 18px;
+}
+
+.booking-card {
+    background: #151515;
+    border: 1px solid #292929;
+    border-radius: 15px;
+    padding: 22px;
+}
+
+.booking-card h2 {
+    margin-bottom: 15px;
+}
+
+.booking-card p {
+    margin: 8px 0;
+    color: #ccc;
+}
+
+.status {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 7px 12px;
+    border-radius: 20px;
+    background: #f5b400;
+    color: #000;
+    font-weight: bold;
+}
+
+
+/* BUTTONS */
+
+.booking-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 18px;
+}
+
+.booking-actions button {
+    border: none;
+    padding: 11px 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.booking-actions button:first-child {
+    background: #f5b400;
+    color: #000;
+}
+
+.booking-actions button:last-child {
+    background: #333;
+    color: #fff;
+}
+
+.booking-actions button:hover {
+    opacity: 0.8;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    .login-box {
+        margin: 80px auto;
+        padding: 30px 20px;
+    }
+
+    .admin-container {
+        margin: 30px auto;
+    }
+
+    .booking-actions {
+        flex-direction: column;
+    }
+
+    .booking-actions button {
+        width: 100%;
+    }
+
+}
+
+.logout-button {
+    float: right;
+    margin-top: -55px;
+    padding: 10px 20px;
+    border: 1px solid #f5b400;
+    border-radius: 8px;
+    background: transparent;
+    color: #f5b400;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.logout-button:hover {
+    background: #f5b400;
+    color: #000;
+}
+
+@media (max-width: 600px) {
+
+    .logout-button {
+        float: none;
+        margin-top: 20px;
+        margin-bottom: 25px;
+        width: 100%;
+    }
+
+}
