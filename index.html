@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PGD HYPER CUT | Premium Barber</title>
+
+    <link rel="stylesheet" href="style.css">
+    <style>
+.shop-status {
+    width: 92%;
+    max-width: 520px;
+    margin: 20px auto;
+    padding: 16px 20px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    box-sizing: border-box;
+
+    background: #ffffff;
+    border: 1px solid #e5e5e5;
+    border-radius: 16px;
+
+    box-shadow: 0 12px 35px rgba(0,0,0,0.10);
+}
+
+.shop-status-dot {
+    width: 12px;
+    height: 12px;
+    flex-shrink: 0;
+    background: #22c55e;
+    border-radius: 50%;
+
+    box-shadow: 0 0 0 6px rgba(34,197,94,0.12);
+}
+
+.shop-status strong {
+    display: block;
+    color: #111111;
+    font-size: 13px;
+    font-weight: 900;
+    letter-spacing: 1.5px;
+}
+
+.shop-status span {
+    display: block;
+    margin-top: 4px;
+    color: #777777;
+    font-size: 11px;
+}
+</style>
+</head>
+
+<body>
+    <!-- TODAY SHOP STATUS -->
+
+<div id="shopStatus" class="shop-status">
+    <div class="shop-status-dot"></div>
+
+    <div>
+        <strong id="shopStatusTitle">
+            SHOP OPEN
+        </strong>
+
+        <span id="shopStatusText">
+            Today 09:00 AM – 08:00 PM
+        </span>
+    </div>
+</div>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+
+        <div class="logo">
+            <span>PGD</span>
+            HYPER CUT
+        </div>
+
+        <button onclick="scrollToBooking()">
+            BOOK NOW
+        </button>
+
+    </header>
+
+
+    <!-- HERO -->
+<section class="hero">
+
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+
+        <div class="badge">
+            ✦ PREMIUM BARBER STUDIO
+        </div>
+
+        <h1>
+            LOOK<br>
+            <span>SHARP.</span>
+        </h1>
+
+        <p>
+            Precision cuts. Clean fades.
+            Premium grooming.
+        </p>
+
+        <button class="main-button" onclick="scrollToBooking()">
+            BOOK YOUR CHAIR
+            <span>→</span>
+        </button>
+
+    </div>
+
+    <div class="hero-bottom">
+
+        <div>
+            <strong>01</strong>
+            <span>PRECISION</span>
+        </div>
+
+        <div>
+            <strong>02</strong>
+            <span>STYLE</span>
+        </div>
+
+        <div>
+            <strong>03</strong>
+            <span>CONFIDENCE</span>
+        </div>
+
+    </div>
+
+</section>
+
+    <!-- ABOUT -->
+    <section class="intro">
+
+        <p class="section-label">
+            THE EXPERIENCE
+        </p>
+
+        <h2>
+            MORE THAN<br>
+            JUST A <span>HAIRCUT.</span>
+        </h2>
+
+        <p class="intro-text">
+            Step into PGD HYPER CUT and experience
+            professional grooming with attention to every detail.
+        </p>
+
+    </section>
+
+
+    <!-- SERVICES -->
+    <section class="services">
+
+        <div class="section-heading">
+
+            <div>
+                <p class="section-label">
+                    WHAT WE DO
+                </p>
+
+                <h2>
+                    OUR SERVICES
+                </h2>
+            </div>
+
+            <span class="service-number">
+                04
+            </span>
+
+        </div>
+
+
+        <div class="service-list">
+
+            <div class="service-card">
+
+                <div class="service-top">
+                    <span>01</span>
+                    <span>✂</span>
+                </div>
+
+                <h3>Hair Cut</h3>
+
+                <p>
+                    Professional haircut
+                    designed for your style.
+                </p>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <div class="service-top">
+                    <span>02</span>
+                    <span>✦</span>
+                </div>
+
+                <h3>Beard</h3>
+
+                <p>
+                    Clean, sharp and perfectly
+                    shaped beard grooming.
+                </p>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <div class="service-top">
+                    <span>03</span>
+                    <span>◆</span>
+                </div>
+
+                <h3>Hair Cut + Beard</h3>
+
+                <p>
+                    Complete grooming for
+                    a fresh new look.
+                </p>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <div class="service-top">
+                    <span>04</span>
+                    <span>◇</span>
+                </div>
+
+                <h3>Facial</h3>
+
+                <p>
+                    Premium facial care for
+                    clean and refreshed skin.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- BOOKING -->
+    <section class="booking" id="booking">
+
+        <div class="booking-heading">
+
+            <p class="section-label">
+                RESERVE YOUR TIME
+            </p>
+
+            <h2>
+                BOOK YOUR<br>
+                <span>APPOINTMENT.</span>
+            </h2>
+
+            <p>
+                Choose your service, date and preferred time.
+            </p>
+
+        </div>
+
+
+        <div class="booking-box">
+
+            <div class="input-group">
+
+                <label>Your Name</label>
+
+                <input
+                    type="text"
+                    id="name"
+                    placeholder="Enter your name"
+                >
+
+            </div>
+
+
+            <div class="input-group">
+
+                <label>WhatsApp Number</label>
+
+                <input
+                    type="tel"
+                    id="phone"
+                    placeholder="Enter WhatsApp number"
+                >
+
+            </div>
+
+
+            <div class="input-group">
+
+                <label>Select Service</label>
+
+                <select id="service">
+
+                    <option value="">
+                        Choose service
+                    </option>
+
+                    <option>
+                        Hair Cut
+                    </option>
+
+                    <option>
+                        Beard
+                    </option>
+
+                    <option>
+                        Hair Cut + Beard
+                    </option>
+
+                    <option>
+                        Facial
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <div class="input-group">
+
+                <label>Select Date</label>
+
+                <input
+                    type="date"
+                    id="date"
+                >
+
+            </div>
+
+
+            <div class="input-group">
+
+                <label>Select Time</label>
+
+                <select id="time">
+
+                    <option value="">
+                        Choose time
+                    </option>
+
+                    
+                    <option>11:00 AM</option>
+                    <option>11:30 AM</option>
+                    <option>12:00 PM</option>
+                    <option>12:30 PM</option>
+                    <option>01:00 PM</option>
+                    <option>01:30 PM</option>
+                    <option>02:00 PM</option>
+                    <option>02:30 PM</option>
+                    <option>03:00 PM</option>
+                    <option>03:30 PM</option>
+                    <option>04:00 PM</option>
+                    <option>04:30 PM</option>
+                    <option>05:00 PM</option>
+                    <option>05:30 PM</option>
+                    <option>06:00 PM</option>
+                    <option>06:30 PM</option>
+                    <option>07:00 PM</option>
+                    <option>07:30 PM</option>
+                    <option>08:00 PM</option>
+                    <option>08:30 PM</option>
+                    <option>09:00 PM</option>
+        
+
+                </select>
+
+            </div>
+
+
+            <button
+                class="whatsapp-button"
+                onclick="bookWhatsApp()"
+            >
+                <span>BOOK VIA WHATSAPP</span>
+                <strong>→</strong>
+            </button>
+
+            <p class="secure-text">
+                Your appointment will be confirmed through WhatsApp.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <div class="footer-logo">
+            PGD HYPER CUT
+        </div>
+
+        <p>
+            PREMIUM BARBER STUDIO
+        </p>
+
+        <div class="footer-line"></div>
+
+        <small>
+            © 2026 PGD HYPER CUT. ALL RIGHTS RESERVED.
+        </small>
+
+    </footer>
+
+
+    <!-- FIREBASE -->
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+
+    <!-- YOUR JAVASCRIPT -->
+    <script src="script.js"></script>
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const today = new Date();
+    const day = today.getDay();
+
+    const statusBox = document.getElementById("shopStatus");
+    const title = document.getElementById("shopStatusTitle");
+    const text = document.getElementById("shopStatusText");
+    const dot = document.querySelector(".shop-status-dot");
+
+    if (!statusBox || !title || !text || !dot) return;
+
+    // Friday = Closed
+    if (day === 5) {
+
+        title.textContent = "FRIDAY — SHOP CLOSED";
+        text.textContent = "We’re closed every Friday.";
+
+        dot.style.background = "#ef4444";
+        dot.style.boxShadow =
+            "0 0 0 6px rgba(239,68,68,0.12)";
+
+    } else {
+
+        title.textContent = "SHOP OPEN";
+        text.textContent = "09:00 AM – 08:00 PM";
+
+        dot.style.background = "#22c55e";
+        dot.style.boxShadow =
+            "0 0 0 6px rgba(34,197,94,0.12)";
+    }
+
+});
+</script>
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const today = new Date();
+
+    const date =
+        today.getFullYear() + "-" +
+        String(today.getMonth() + 1).padStart(2, "0") + "-" +
+        String(today.getDate()).padStart(2, "0");
+
+    if (date === "2026-09-21") {
+
+        document.getElementById("shopStatusTitle").textContent =
+            "SHOP CLOSED TODAY";
+
+        document.getElementById("shopStatusText").textContent =
+            "Sorry, we're closed today.";
+
+        const dot =
+            document.querySelector(".shop-status-dot");
+
+        dot.style.background = "#ef4444";
+
+        dot.style.boxShadow =
+            "0 0 0 6px rgba(239,68,68,0.12)";
+    }
+
+});
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    function updateShopStatus() {
+
+        const now = new Date();
+
+        const day = now.getDay();
+        const hour = now.getHours();
+
+        const title =
+            document.getElementById("shopStatusTitle");
+
+        const text =
+            document.getElementById("shopStatusText");
+
+        const dot =
+            document.querySelector(".shop-status-dot");
+
+        if (!title || !text || !dot) return;
+
+
+        // =========================
+        // FRIDAY — CLOSED
+        // =========================
+
+        if (day === 5) {
+
+            title.textContent =
+                "FRIDAY — SHOP CLOSED";
+
+            text.textContent =
+                "We’re closed every Friday.";
+
+            dot.style.background =
+                "#ef4444";
+
+            dot.style.boxShadow =
+                "0 0 0 6px rgba(239,68,68,0.12)";
+
+            return;
+        }
+
+
+        // =========================
+        // OPEN: 11 AM – 9 PM
+        // =========================
+
+        if (hour >= 11 && hour < 21) {
+
+            title.textContent =
+                "SHOP OPEN";
+
+            text.textContent =
+                "Open today • 11:00 AM – 09:00 PM";
+
+            dot.style.background =
+                "#22c55e";
+
+            dot.style.boxShadow =
+                "0 0 0 6px rgba(34,197,94,0.12)";
+
+        } else {
+
+            title.textContent =
+                "SHOP CLOSED";
+
+            text.textContent =
+                "Opens tomorrow at 11:00 AM";
+
+            dot.style.background =
+                "#ef4444";
+
+            dot.style.boxShadow =
+                "0 0 0 6px rgba(239,68,68,0.12)";
+        }
+    }
+
+
+    // Run immediately
+    updateShopStatus();
+
+
+    // Update every minute
+    setInterval(
+        updateShopStatus,
+        60000
+    );
+
+});
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    function checkBookingAvailability() {
+
+        const now = new Date();
+        const day = now.getDay();
+        const hour = now.getHours();
+
+        const dateInput =
+            document.getElementById("date");
+
+        const timeInput =
+            document.getElementById("time");
+
+        const bookingButton =
+            document.querySelector(
+                'button[onclick="bookWhatsApp()"]'
+            );
+
+        // Friday CLOSED
+        const closed =
+            day === 5 || hour < 11 || hour >= 21;
+
+        if (closed) {
+
+            if (dateInput) {
+                dateInput.disabled = true;
+            }
+
+            if (timeInput) {
+                timeInput.disabled = true;
+            }
+
+            if (bookingButton) {
+                bookingButton.disabled = true;
+                bookingButton.textContent =
+                    "SHOP CLOSED";
+            }
+
+        } else {
+
+            if (dateInput) {
+                dateInput.disabled = false;
+            }
+
+            if (timeInput) {
+                timeInput.disabled = false;
+            }
+
+            if (bookingButton) {
+                bookingButton.disabled = false;
+                bookingButton.textContent =
+                    "BOOK APPOINTMENT";
+            }
+        }
+    }
+
+    checkBookingAvailability();
+
+    setInterval(
+        checkBookingAvailability,
+        60000
+    );
+
+});
+</script>
+
+<script>
+function closeSuccess() {
+    document.getElementById("successModal").classList.remove("show");
+}
+</script>
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const dateInput = document.getElementById("date");
+
+    if (!dateInput) return;
+
+    dateInput.addEventListener("change", function () {
+
+        if (!this.value) return;
+
+        const selectedDate = new Date(this.value + "T00:00:00");
+
+        // Friday = 5
+        if (selectedDate.getDay() === 5) {
+
+            alert("Friday — Shop Closed. Please choose another date.");
+
+            this.value = "";
+
+            const timeInput = document.getElementById("time");
+
+            if (timeInput) {
+                timeInput.value = "";
+            }
+        }
+
+    });
+
+});
+</script>
+
+</body>
+
+<!-- BOOKING SUCCESS -->
+<div id="successModal" class="success-modal">
+
+    <div class="success-card">
+
+        <button
+            class="success-close"
+            onclick="closeSuccess()"
+        >
+            ×
+        </button>
+
+        <div class="success-icon">
+            ✓
+        </div>
+
+        <p class="section-label">
+            BOOKING RECEIVED
+        </p>
+
+        <h2>
+            THANK<br>
+            <span>YOU.</span>
+        </h2>
+
+        <p class="success-message">
+            Your booking details have been received.
+            Please check WhatsApp for confirmation.
+        </p>
+
+        <div class="success-details">
+
+            <div>
+                <small>NAME</small>
+                <strong id="successName"></strong>
+            </div>
+
+            <div>
+                <small>SERVICE</small>
+                <strong id="successService"></strong>
+            </div>
+
+            <div>
+                <small>DATE</small>
+                <strong id="successDate"></strong>
+            </div>
+
+            <div>
+                <small>TIME</small>
+                <strong id="successTime"></strong>
+            </div>
+
+        </div>
+
+        <button
+            class="success-home"
+            onclick="closeSuccess()"
+        >
+            DONE
+        </button>
+
+    </div>
+
+</div>
+
+</html>

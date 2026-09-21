@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PGD HYPER CUT | Admin</title>
+
+    <link rel="stylesheet" href="admin.css">
+</head>
+
+<body>
+
+    <!-- LOGIN -->
+
+    <div class="login-box" id="loginBox">
+
+        <h1>PGD HYPER CUT</h1>
+
+        <p>ADMIN LOGIN</p>
+
+        <input
+            type="email"
+            id="adminEmail"
+            placeholder="Admin Email"
+        >
+
+        <input
+            type="password"
+            id="adminPassword"
+            placeholder="Password"
+        >
+
+        <button onclick="adminLogin()">
+            LOGIN
+        </button>
+
+        <div id="loginError"></div>
+
+    </div>
+
+
+    <!-- ADMIN PANEL -->
+
+    <div class="admin-container" id="adminPanel">
+
+        <h1>PGD HYPER CUT</h1>
+
+        <p>ADMIN PANEL</p>
+        <div class="admin-live-status">
+    <span></span>
+    SYSTEM ONLINE
+</div>
+        <button class="logout-button" onclick="adminLogout()">
+    LOGOUT
+</button>
+
+<div class="admin-stats">
+    <div class="analytics-card">
+
+    <div class="analytics-header">
+        <div>
+            <small>BOOKING ANALYTICS</small>
+            <strong>Performance</strong>
+        </div>
+
+        <span>📊</span>
+    </div>
+
+    <div class="analytics-grid">
+
+        <div>
+            <small>TODAY</small>
+            <strong id="analyticsToday">0</strong>
+        </div>
+
+        <div>
+            <small>THIS WEEK</small>
+            <strong id="analyticsWeek">0</strong>
+        </div>
+
+        <div>
+            <small>THIS MONTH</small>
+            <strong id="analyticsMonth">0</strong>
+        </div>
+
+    </div>
+
+</div>
+
+    <div class="admin-stat-card">
+        <small>TODAY'S BOOKINGS</small>
+        <strong id="todayBookingCount">0</strong>
+    </div>
+
+    <div class="admin-stat-card">
+    <small>TODAY'S BOOKED SLOTS</small>
+    <strong id="todaySlotCount">0</strong>
+</div>
+
+<div class="admin-stat-card">
+    <small>TOTAL BOOKINGS</small>
+    <strong id="totalBookingCount">0</strong>
+</div>
+
+</div>
+<div class="booking-search">
+
+    <input
+        type="text"
+        id="bookingSearch"
+        placeholder="Search name, WhatsApp or service..."
+    >
+
+</div>
+<div class="calendar-view-card">
+
+    <div class="calendar-view-header">
+        <div>
+            <small>APPOINTMENT DATE</small>
+            <strong>Select a date</strong>
+        </div>
+
+        <span>📅</span>
+    </div>
+
+    <input
+        type="date"
+        id="calendarDate"
+    >
+
+    <button onclick="useCalendarDate()">
+        VIEW THIS DATE
+    </button>
+
+</div>
+
+<div class="booking-date-filter">
+    <div class="time-timeline-card">
+
+    <div class="timeline-header">
+        <div>
+            <small>DAILY SCHEDULE</small>
+            <strong>Time Slots</strong>
+        </div>
+
+        <span>⏰</span>
+    </div>
+
+    <div id="timeTimeline">
+        Select a date to view slots.
+    </div>
+
+</div>
+
+    <input
+        type="date"
+        id="bookingDateFilter"
+    >
+
+    <button onclick="clearDateFilter()">
+        CLEAR DATE
+    </button>
+
+</div>
+
+<button
+    class="reset-filters-button"
+    onclick="resetAllFilters()"
+>
+    RESET FILTERS
+</button>
+
+<div class="booking-filters">
+
+    <button class="active" onclick="filterBookings('all')">
+    ALL
+</button>
+
+
+    <button onclick="filterBookings('pending')">
+        PENDING
+    </button>
+
+    <button onclick="filterBookings('accepted')">
+        ACCEPTED
+    </button>
+
+    <button onclick="filterBookings('rejected')">
+        REJECTED
+    </button>
+
+</div>
+<div class="bookings-section-header">
+    <div>
+        <small>APPOINTMENTS</small>
+        <h2>Bookings</h2>
+    </div>
+
+    <span id="visibleBookingCount">0</span>
+</div>
+
+<<div id="bookings">
+
+    <div class="bookings-loader">
+
+        <div class="loader-ring"></div>
+
+        <small>
+            LOADING BOOKINGS
+        </small>
+
+    </div>
+
+</div>
+
+    </div>
+
+
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+
+    <script src="admin.js"></script>
+
+ 
+
+</body>
+<div id="newBookingAlert" class="new-booking-alert">
+    <span class="alert-icon">🔔</span>
+
+    <div>
+        <strong>NEW BOOKING</strong>
+        <small id="newBookingAlertText">
+            A new appointment has arrived.
+        </small>
+    </div>
+
+    <button onclick="closeBookingAlert()">×</button>
+</div>
+
+
+
+</html>
